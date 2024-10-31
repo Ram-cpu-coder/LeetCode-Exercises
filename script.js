@@ -12,20 +12,51 @@
 
 // const word = "abcd";
 
-const possibleStringCount = (word)=>{
-    let possibleWords = new Set();
-    possibleWords.add(word);
+// const possibleStringCount = (word)=>{
+//     let possibleWords = new Set();
+//     possibleWords.add(word);
 
-    for(i = 0; i < word.length - 1; i++){
-        if(word[i] === word[i+1]){
-            let originalWords = word.slice(0, i+1) + word.slice(i+2);
-            possibleWords.add(originalWords);
+//     for(i = 0; i < word.length - 1; i++){
+//         if(word[i] === word[i+1]){
+//             let originalWords = word.slice(0, i+1) + word.slice(i+2);
+//             possibleWords.add(originalWords);
             
+//         }
+//         console.log(possibleWords);
+//     }
+//     return possibleWords.size;
+// }
+// console.log(possibleStringCount("abbcccc"));
+
+// =====================================================================================================
+// Convert Date to Binary
+
+// You are given a string date representing a Gregorian calendar date in the yyyy-mm-dd format.
+
+// date can be written in its binary representation obtained by converting year, month, and day to their binary representations without any leading zeroes and writing them down in year-month-day format.
+
+// Return the binary representation of date.
+const date = "2070-02-29";
+let year = parseInt(date.split("-")[0]);
+let month = parseInt(date.split("-")[1]);
+let day = parseInt(date.split("-")[2]);
+
+console.log(year, month, day);
+
+const decimalToBinary = (decimal)=>{
+    let binary ='';
+    if(decimal === 0){
+            return 0;
         }
-        console.log(possibleWords);
+    while(decimal > 0){
+        const remainder = decimal % 2;
+        binary = remainder + binary; 
+        decimal = Math.floor(decimal/2);
+       
     }
-    return possibleWords.size;
+    return binary;  
 }
-console.log(possibleStringCount("abbcccc"));
+console.log(`${decimalToBinary(year)}-${decimalToBinary(month)}-${decimalToBinary(day)}`);
+
 
 // =====================================================================================================
