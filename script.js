@@ -20,7 +20,7 @@
 //         if(word[i] === word[i+1]){
 //             let originalWords = word.slice(0, i+1) + word.slice(i+2);
 //             possibleWords.add(originalWords);
-            
+
 //         }
 //         console.log(possibleWords);
 //     }
@@ -52,7 +52,7 @@
 //         const remainder = decimal % 2;
 //         binary = remainder + binary; 
 //         decimal = Math.floor(decimal/2);
-       
+
 //     }
 //     return binary;  
 // }
@@ -63,25 +63,61 @@
 
 // BINARY TO DECIMAL
 
-const binary = "11111100100-1011-1";
-let year = binary.split("-")[0];
-let month = binary.split("-")[1];
-let day = binary.split("-")[2];
+// const binary = "11111100100-1011-1";
+// let year = binary.split("-")[0];
+// let month = binary.split("-")[1];
+// let day = binary.split("-")[2];
 
-console.log(year, month, day);
+// console.log(year, month, day);
 
-const binaryToDecimal =(inputBinary)=>{
-    let result = 0;
-    const lastIndex = inputBinary.length;
-    for(let i = 0; i < lastIndex; i++){
-        result += parseInt(inputBinary[i] * 2**(lastIndex-1-i));
-        // console.log(result);
-         
+// const binaryToDecimal =(inputBinary)=>{
+//     let result = 0;
+//     const lastIndex = inputBinary.length;
+//     for(let i = 0; i < lastIndex; i++){
+//         result += parseInt(inputBinary[i] * 2**(lastIndex-1-i));
+//         // console.log(result);
+
+//     }
+//     return result;
+// }
+// console.log(binaryToDecimal(year));
+// console.log(binaryToDecimal(month));
+// console.log(binaryToDecimal(day));
+
+
+
+// =====================================================================================================
+
+// You are given two strings, coordinate1 and coordinate2, representing the coordinates of a square on an 8 x 8 chessboard.
+
+// Below is the chessboard for reference.
+
+
+
+// Return true if these two squares have the same color and false otherwise.
+
+// The coordinate will always represent a valid chessboard square. The coordinate will always have the letter first (indicating its column), and the number second (indicating its row).
+
+const checkTwoChessboards = (input1, input2) => {
+    const numA = parseInt(input1.toString()[1]);
+    const numB = parseInt(input2.toString()[1]);
+
+    if (numA === 0 || numB === 0) {
+        return `You can not enter zero`;
     }
-    return result;
+    while (numA, numB > 0) {
+        let result = numA + numB;
+         if (result % 2 === 0) {
+        return `The square of this co-ordinate is black.`
+    } else {
+        return `The square of this co-ordinate is white.`
+    }
+    }
+   
+    // console.log(numA, typeof numA);
+    // console.log(numB, typeof numB);
 }
-console.log(binaryToDecimal(year));
-console.log(binaryToDecimal(month));
-console.log(binaryToDecimal(day));
+console.log(checkTwoChessboards("a1", "h3"));
 
 
+// =====================================================================================================
