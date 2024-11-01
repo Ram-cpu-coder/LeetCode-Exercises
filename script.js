@@ -81,3 +81,7 @@ const binaryToDecimal =(inputBinary)=>{
     return result;
 }
 console.log(binaryToDecimal(year));
+console.log(binaryToDecimal(month));
+console.log(binaryToDecimal(day));
+
+
