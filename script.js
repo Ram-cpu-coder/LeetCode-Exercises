@@ -98,26 +98,59 @@
 
 // The coordinate will always represent a valid chessboard square. The coordinate will always have the letter first (indicating its column), and the number second (indicating its row).
 
-const checkTwoChessboards = (input1, input2) => {
-    const numA = parseInt(input1.toString()[1]);
-    const numB = parseInt(input2.toString()[1]);
+// const checkTwoChessboards = (input1, input2) => {
+//     const numA = parseInt(input1.toString()[1]);
+//     const numB = parseInt(input2.toString()[1]);
 
-    if (numA === 0 || numB === 0) {
-        return `You can not enter zero`;
-    }
-    while (numA, numB > 0) {
-        let result = numA + numB;
-         if (result % 2 === 0) {
-        return `The square of this co-ordinate is black.`
-    } else {
-        return `The square of this co-ordinate is white.`
-    }
-    }
+//     if (numA === 0 || numB === 0) {
+//         return `You can not enter zero`;
+//     }
+//     while (numA, numB > 0) {
+//         let result = numA + numB;
+//          if (result % 2 === 0) {
+//         return `The square of this co-ordinate is black.`
+//     } else {
+//         return `The square of this co-ordinate is white.`
+//     }
+//     }
    
     // console.log(numA, typeof numA);
     // console.log(numB, typeof numB);
-}
-console.log(checkTwoChessboards("a1", "h3"));
+// }
+// console.log(checkTwoChessboards("a1", "h3"));
 
+
+// =====================================================================================================
+
+// Given a string s, find the length of the longest 
+// substring
+//  without repeating characters.
+
+//  const s = "abcabcbb";
+
+ const lengthOfLongestSubstring = (s)=>{
+    let right = 0;
+    let left = 0;
+    let maxLength = 0;
+    let possibleStr = [];
+
+    for(right = 0; right < s.length-1; right++){
+
+        while(possibleStr.includes(s[right])){
+            delete possibleStr[left];
+            left++;
+        }
+        possibleStr.push(s[right]);
+        maxLength = Math.max(maxLength, right - left + 1)
+    }
+    console.log(possibleStr);
+    
+    return maxLength;
+ }
+
+ console.log(lengthOfLongestSubstring("abcabcbb"));
+
+ 
+ 
 
 // =====================================================================================================
