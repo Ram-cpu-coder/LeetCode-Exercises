@@ -426,8 +426,21 @@ const functionArr = (arr, checkItem)=>{
     console.log(`${checkItem} is ${resultCheck}`);   
 }
 functionArr(books, "Book F");
+
 // Exercise 10: Create an array called `numbers2` with values `[10, 20, 30, 40]`.
 //    - Insert `25` between `20` and `30`, then remove the first element. Sort in descending order.
+const numbers2 = [10, 20, 30, 40];
+const insertSort = (arr, toAdd)=>{
+    arr.splice(2, 0, toAdd);
+    arr.shift();
+    arr.sort((a, b) =>{ return b - a});
+    console.log(`First element is deleted.`);
+    console.log(`${toAdd} is added and the array is sorted in descending order.`);
+    console.log(`Final Array:`, arr);
+    
+}
+insertSort(numbers2, 25);
+
 
 // Exercise 11: Create an array called `movies` with values `["Inception", "Titanic", "Avatar"]`.
 //    - Add a new movie at the beginning, then check if "Titanic" is in the array and remove it.
