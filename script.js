@@ -207,11 +207,30 @@ for(let i = 0; i < len; i++){
 
 // Use the forEach() method to log each number.
 arr.forEach((item, i)=>{
-    console.log("8."+(i+1)+")" + item);
+    console.log("8."+(i+1)+") " + item);
 })
 // Create a new array called squaredNumbers that contains the squares of each number using map().
+const squaredNumbers = arr.map((item)=>{
+    return item * item;
+});
+console.log("9)",squaredNumbers);
+               
 // Create a new array called evenNumbers that contains only the even numbers from numbers using filter().
+arr.push(2,4,6,8);
+const evenNum = arr.filter((item, i)=>{
+    if(item % 2 === 0){
+        return item;
+    }
+})
+console.log("10) ", evenNum);
+
 // Use the reduce() method to find the sum of all numbers in the array.
+const sum = arr.reduce((acc, item)=>{
+    return acc + item;
+},0);
+console.log(arr);
+console.log("11) ", sum);
+
 // Check if there is any number greater than 5 using some().
 // Check if all numbers are less than 10 using every().
 // Find the first number that is greater than 4 using find().
