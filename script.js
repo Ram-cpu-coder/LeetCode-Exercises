@@ -313,16 +313,31 @@ const ages = [22, 25, 30, 35];
 const removedAges = ages.pop();
 console.log("Removed item: " + removedAges, ages);
 
-ages.unshift(12,45);
-console.log( ages);
+ages.unshift(12, 45);
+console.log(ages);
 
-const reversedAges = ages.sort((a,b)=>{return b-a})
+const reversedAges = ages.sort((a, b) => { return b - a })
 console.log(reversedAges);
 
 
 // Exercise 4: Create an array called `pets` with values `["dog", "cat", "rabbit"]`.
 //    - Replace "cat" with "hamster", then reverse the array.
 //    - Check if "turtle" is in the array; if not, add it.
+const pets = ["dog", "cat", "rabbit"];
+pets[1] = "hamster";
+pets.reverse();
+console.log(pets);
+
+const turtle = (arr, str) => {
+    const checkPets = arr.some((item) => { return item === str });
+    if (!checkPets) {
+        arr.push(str);
+    }
+    return arr;
+}
+
+console.log(turtle(pets, "turtle"));
+
 
 // Exercise 5: Create an array called `scores` with values `[95, 85, 75, 65]`.
 //    - Sort the scores in ascending order, then add 90 at the correct position to maintain the order.
