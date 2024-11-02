@@ -171,4 +171,96 @@
 //calculation in leetcode is wrong for 123456789 * 987654321
 // =====================================================================================================
 
+
+
+
+
+
 // =====================================================================================================
+// Exercise 1: Create an array called numbers with the following values: [1, 3, 5, 7, 9]. Perform the following operations:
+
+const arr = [1, 3, 5, 7, 9];
+// Log the second element of the array.
+console.log("1) " + arr[1]);
+
+// Change the first element to 0.
+console.log("2) "  + arr[0]);
+arr[0] = 0;
+console.log("3) " + arr[0]);
+
+// Add the number 10 to the end of the array.
+arr.push(10);
+console.log("4)", arr);
+
+// Remove the last element of the array.
+arr.pop();
+console.log("5)", arr);
+
+// Log the length of the array.
+const len = arr.length;
+console.log("6) ",len);
+
+// Use a for loop to log each number in the array.
+for(let i = 0; i < len; i++){
+    console.log("7."+(i+1)+")" ,arr[i]);
+}
+
+// Use the forEach() method to log each number.
+arr.forEach((item, i)=>{
+    console.log("8."+(i+1)+")" + item);
+})
+// Create a new array called squaredNumbers that contains the squares of each number using map().
+// Create a new array called evenNumbers that contains only the even numbers from numbers using filter().
+// Use the reduce() method to find the sum of all numbers in the array.
+// Check if there is any number greater than 5 using some().
+// Check if all numbers are less than 10 using every().
+// Find the first number that is greater than 4 using find().
+// Create another array called moreNumbers with values [2, 4, 6] and combine it with numbers using concat().
+// Sort the numbers array in ascending order using sort().
+// Reverse the numbers array using reverse().
+// Create a new array called firstTwoNumbers that contains the first two elements using slice().
+// Remove the second element of the numbers array using splice().
+// Create a string from the numbers array where each number is separated by a hyphen using join().
+// Log the final state of the numbers array.
+// Similar Exercises
+// Here are 20 similar exercises for practice:
+
+// Exercise 2: Create an array called colors with values ["red", "green", "blue"]. Perform various operations as outlined in the main exercise.
+
+// Exercise 3: Create an array called ages with values [22, 25, 30, 35]. Perform the same set of operations as in the main exercise.
+
+// Exercise 4: Create an array called pets with values ["dog", "cat", "rabbit"]. Follow the steps in the main exercise.
+
+// Exercise 5: Create an array called scores with values [95, 85, 75, 65]. Perform the outlined operations.
+
+// Exercise 6: Create an array called hobbies with values ["reading", "swimming", "coding"]. Do the same set of operations.
+
+// Exercise 7: Create an array called days with values ["Monday", "Tuesday", "Wednesday"]. Perform the operations as listed.
+
+// Exercise 8: Create an array called temperatures with values [30, 25, 20, 15]. Follow the exercise steps.
+
+// Exercise 9: Create an array called books with values ["Book A", "Book B", "Book C"]. Perform the outlined operations.
+
+// Exercise 10: Create an array called numbers2 with values [10, 20, 30, 40]. Perform all operations as in the main exercise.
+
+// Exercise 11: Create an array called movies with values ["Inception", "Titanic", "Avatar"]. Follow the main exercise operations.
+
+// Exercise 12: Create an array called months with values ["January", "February", "March"]. Perform the same steps as in the main exercise.
+
+// Exercise 13: Create an array called shapes with values ["circle", "square", "triangle"]. Complete the operations as described.
+
+// Exercise 14: Create an array called numbers3 with values [5, 10, 15, 20]. Follow the outlined steps.
+
+// Exercise 15: Create an array called cities with values ["New York", "Los Angeles", "Chicago"]. Perform the operations from the main exercise.
+
+// Exercise 16: Create an array called products with values ["Apples", "Oranges", "Bananas"]. Follow the same steps as in the main exercise.
+
+// Exercise 17: Create an array called languages with values ["English", "Spanish", "French"]. Perform the outlined operations.
+
+// Exercise 18: Create an array called vehicles with values ["Car", "Bike", "Bus"]. Complete the operations as described.
+
+// Exercise 19: Create an array called instruments with values ["Guitar", "Piano", "Drums"]. Follow the main exercise operations.
+
+// Exercise 20: Create an array called events with values ["Concert", "Festival", "Exhibition"]. Perform the same steps.
+
+// Exercise 21: Create an array called numbers4 with values [3, 6, 9, 12]. Complete the operations as per the main exercise.
