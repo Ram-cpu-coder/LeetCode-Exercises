@@ -342,6 +342,16 @@ console.log(turtle(pets, "turtle"));
 // Exercise 5: Create an array called `scores` with values `[95, 85, 75, 65]`.
 //    - Sort the scores in ascending order, then add 90 at the correct position to maintain the order.
 
+const scores = [95, 85, 75, 65];
+console.log("Scores",scores);
+
+scores.sort();
+console.log("Sorted scores before adding element:", scores);
+
+scores.push(90);
+scores.sort();
+console.log("Added and sorted scores:", scores);
+
 // Exercise 6: Create an array called `hobbies` with values `["reading", "swimming", "coding"]`.
 //    - Remove the first hobby, add "traveling" at the end, and find the index of "coding".
 
