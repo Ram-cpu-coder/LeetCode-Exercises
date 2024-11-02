@@ -308,6 +308,17 @@ console.log(checkColor, colors);
 
 // Exercise 3: Create an array called `ages` with values `[22, 25, 30, 35]`.
 //    - Remove the last age, add two new ages at the beginning, and sort the array in descending order.
+const ages = [22, 25, 30, 35];
+
+const removedAges = ages.pop();
+console.log("Removed item: " + removedAges, ages);
+
+ages.unshift(12,45);
+console.log( ages);
+
+const reversedAges = ages.sort((a,b)=>{return b-a})
+console.log(reversedAges);
+
 
 // Exercise 4: Create an array called `pets` with values `["dog", "cat", "rabbit"]`.
 //    - Replace "cat" with "hamster", then reverse the array.
