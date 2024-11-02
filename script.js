@@ -400,13 +400,32 @@ const temp = (arr, toAddFront, toAddEnd)=>{
     arr.sort();
 
     console.log(`Reversed: ${reversed} and ${toAddFront} is added in the front and at the same time ${toAddEnd} is added at the end.`);
-    console.log(`Final Array: ${arr}`);
+    console.log(`Final Array:`, arr);
 }
 temp(temperatures, 10, 35);
+
 // Exercise 9: Create an array called `books` with values `["Book A", "Book B", "Book C"]`.
 //    - Replace "Book B" with "Book D" and add "Book E" to the start of the array.
 //    - Remove the last book and check if "Book F" exists.
+const books = ["Book A", "Book B", "Book C"];
+const replace = (arr, replacer, replaced, toAddFront)=>{
+    arr[replaced] = replacer;
+    arr.unshift(toAddFront);
+    console.log(`${replaced} is replaced by ${replacer} and ${toAddFront} is added in the front of the array.`);
+    console.log(`Final Array:`,  arr);
+}
+replace(books, "Book D", "Book B", "Book E")
 
+
+const functionArr = (arr, checkItem)=>{
+    const deleted = arr.pop();
+   const resultCheck = arr.some((item)=>{
+        return arr[item] === checkItem;
+    })
+    console.log(`${deleted} is deleted from the array.`);
+    console.log(`${checkItem} is ${resultCheck}`);   
+}
+functionArr(books, "Book F");
 // Exercise 10: Create an array called `numbers2` with values `[10, 20, 30, 40]`.
 //    - Insert `25` between `20` and `30`, then remove the first element. Sort in descending order.
 
