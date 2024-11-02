@@ -392,6 +392,17 @@ console.log(days);
 // Exercise 8: Create an array called `temperatures` with values `[30, 25, 20, 15]`.
 //    - Reverse the array, then add 10 at the beginning and 35 at the end. Sort it in ascending order.
 
+const temperatures = [30, 25, 20, 15];
+const temp = (arr, toAddFront, toAddEnd)=>{
+    const reversed = arr.reverse();
+    arr.unshift(toAddFront);
+    arr.push(toAddEnd);
+    arr.sort();
+
+    console.log(`Reversed: ${reversed} and ${toAddFront} is added in the front and at the same time ${toAddEnd} is added at the end.`);
+    console.log(`Final Array: ${arr}`);
+}
+temp(temperatures, 10, 35);
 // Exercise 9: Create an array called `books` with values `["Book A", "Book B", "Book C"]`.
 //    - Replace "Book B" with "Book D" and add "Book E" to the start of the array.
 //    - Remove the last book and check if "Book F" exists.
