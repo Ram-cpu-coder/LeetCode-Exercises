@@ -293,158 +293,170 @@
 // Exercise 2: Create an array called `colors` with values `["red", "green", "blue"]`.  
 //    - Add two colors to the end of the array, then remove the first color.
 //    - Check if the color "purple" exists in the array, and if not, add it.
-const colors = ["red", "green", "blue"];
-console.log(colors);
-const addedColors = colors.push("pink", "yellow");
-console.log(colors);
+// const colors = ["red", "green", "blue"];
+// console.log(colors);
+// const addedColors = colors.push("pink", "yellow");
+// console.log(colors);
 
-const checkColor = colors.some((item) => {
-    return item === "purple";
-})
-if (!checkColor) {
-    colors.push("purple")
-};
-console.log(checkColor, colors);
+// const checkColor = colors.some((item) => {
+//     return item === "purple";
+// })
+// if (!checkColor) {
+//     colors.push("purple")
+// };
+// console.log(checkColor, colors);
 
-// Exercise 3: Create an array called `ages` with values `[22, 25, 30, 35]`.
-//    - Remove the last age, add two new ages at the beginning, and sort the array in descending order.
-const ages = [22, 25, 30, 35];
+// // Exercise 3: Create an array called `ages` with values `[22, 25, 30, 35]`.
+// //    - Remove the last age, add two new ages at the beginning, and sort the array in descending order.
+// const ages = [22, 25, 30, 35];
 
-const removedAges = ages.pop();
-console.log("Removed item: " + removedAges, ages);
+// const removedAges = ages.pop();
+// console.log("Removed item: " + removedAges, ages);
 
-ages.unshift(12, 45);
-console.log(ages);
+// ages.unshift(12, 45);
+// console.log(ages);
 
-const reversedAges = ages.sort((a, b) => { return b - a })
-console.log(reversedAges);
-
-
-// Exercise 4: Create an array called `pets` with values `["dog", "cat", "rabbit"]`.
-//    - Replace "cat" with "hamster", then reverse the array.
-//    - Check if "turtle" is in the array; if not, add it.
-const pets = ["dog", "cat", "rabbit"];
-pets[1] = "hamster";
-pets.reverse();
-console.log(pets);
-
-const turtle = (arr, str) => {
-    const checkPets = arr.some((item) => { return item === str });
-    if (!checkPets) {
-        arr.push(str);
-    }
-    return arr;
-}
-
-console.log(turtle(pets, "turtle"));
+// const reversedAges = ages.sort((a, b) => { return b - a })
+// console.log(reversedAges);
 
 
-// Exercise 5: Create an array called `scores` with values `[95, 85, 75, 65]`.
-//    - Sort the scores in ascending order, then add 90 at the correct position to maintain the order.
+// // Exercise 4: Create an array called `pets` with values `["dog", "cat", "rabbit"]`.
+// //    - Replace "cat" with "hamster", then reverse the array.
+// //    - Check if "turtle" is in the array; if not, add it.
+// const pets = ["dog", "cat", "rabbit"];
+// pets[1] = "hamster";
+// pets.reverse();
+// console.log(pets);
 
-const scores = [95, 85, 75, 65];
-console.log("Scores", scores);
+// const turtle = (arr, str) => {
+//     const checkPets = arr.some((item) => { return item === str });
+//     if (!checkPets) {
+//         arr.push(str);
+//     }
+//     return arr;
+// }
 
-scores.sort();
-console.log("Sorted scores before adding element:", scores);
-
-const addAndSort = (arr, score) => {
-    arr.push(score);
-    arr.sort();
-    console.log("Added and Sorted scores:", arr);
-}
-addAndSort(scores, 90);
+// console.log(turtle(pets, "turtle"));
 
 
-// Exercise 6: Create an array called `hobbies` with values `["reading", "swimming", "coding"]`.
-//    - Remove the first hobby, add "traveling" at the end, and find the index of "coding".
-const hobbies = ["reading", "swimming", "coding"];
-console.log("Hobbies:", hobbies);
+// // Exercise 5: Create an array called `scores` with values `[95, 85, 75, 65]`.
+// //    - Sort the scores in ascending order, then add 90 at the correct position to maintain the order.
 
-const remove_add_find = (arr, str, findIndexOf)=>{
-    arr.shift();
-    arr.push(str);
-    const Index = arr.indexOf(findIndexOf);
+// const scores = [95, 85, 75, 65];
+// console.log("Scores", scores);
 
-    console.log(`First item is removed and ${str} is added at the end.`);
-    console.log(arr);
-    console.log(`Index of ${findIndexOf} is ${Index}`); 
-}
-remove_add_find(hobbies, "travelling", "coding");
+// scores.sort();
+// console.log("Sorted scores before adding element:", scores);
 
-// Exercise 7: Create an array called `days` with values `["Monday", "Tuesday", "Wednesday"]`.
-//    - Add "Thursday" at the end, "Sunday" at the beginning, then remove "Tuesday" from the array.
+// const addAndSort = (arr, score) => {
+//     arr.push(score);
+//     arr.sort();
+//     console.log("Added and Sorted scores:", arr);
+// }
+// addAndSort(scores, 90);
 
-const days = ["Monday", "Tuesday", "Wednesday"];
-console.log("Days:", days);
 
-const add_remove = (toAddFront, toAddEnd, toRemove, arr)=>{
-    arr.unshift(toAddFront);
-    arr.push(toAddEnd);
-    delete arr[toRemove];
+// // Exercise 6: Create an array called `hobbies` with values `["reading", "swimming", "coding"]`.
+// //    - Remove the first hobby, add "traveling" at the end, and find the index of "coding".
+// const hobbies = ["reading", "swimming", "coding"];
+// console.log("Hobbies:", hobbies);
 
-    console.log(toAddFront, "is added in the front and", toAddEnd, "is added in the end and", toRemove, "is removed." );
+// const remove_add_find = (arr, str, findIndexOf)=>{
+//     arr.shift();
+//     arr.push(str);
+//     const Index = arr.indexOf(findIndexOf);
+
+//     console.log(`First item is removed and ${str} is added at the end.`);
+//     console.log(arr);
+//     console.log(`Index of ${findIndexOf} is ${Index}`); 
+// }
+// remove_add_find(hobbies, "travelling", "coding");
+
+// // Exercise 7: Create an array called `days` with values `["Monday", "Tuesday", "Wednesday"]`.
+// //    - Add "Thursday" at the end, "Sunday" at the beginning, then remove "Tuesday" from the array.
+
+// const days = ["Monday", "Tuesday", "Wednesday"];
+// console.log("Days:", days);
+
+// const add_remove = (toAddFront, toAddEnd, toRemove, arr)=>{
+//     arr.unshift(toAddFront);
+//     arr.push(toAddEnd);
+//     arr = arr.filter((item)=>{return item !== toRemove })
+
+//     console.log(toAddFront, "is added in the front and", toAddEnd, "is added in the end and", toRemove, "is removed." );
+//     console.log("Final array :", arr);
     
-}
-add_remove("Sunday", "Thursday", "Tuesday", days);
-console.log(days);
+// }
+// add_remove("Sunday", "Thursday", "Tuesday", days);
 
-// Exercise 8: Create an array called `temperatures` with values `[30, 25, 20, 15]`.
-//    - Reverse the array, then add 10 at the beginning and 35 at the end. Sort it in ascending order.
+// // Exercise 8: Create an array called `temperatures` with values `[30, 25, 20, 15]`.
+// //    - Reverse the array, then add 10 at the beginning and 35 at the end. Sort it in ascending order.
 
-const temperatures = [30, 25, 20, 15];
-const temp = (arr, toAddFront, toAddEnd)=>{
-    const reversed = arr.reverse();
-    arr.unshift(toAddFront);
-    arr.push(toAddEnd);
-    arr.sort();
+// const temperatures = [30, 25, 20, 15];
+// const temp = (arr, toAddFront, toAddEnd)=>{
+//     const reversed = arr.reverse();
+//     arr.unshift(toAddFront);
+//     arr.push(toAddEnd);
+//     arr.sort();
 
-    console.log(`Reversed: ${reversed} and ${toAddFront} is added in the front and at the same time ${toAddEnd} is added at the end.`);
-    console.log(`Final Array:`, arr);
-}
-temp(temperatures, 10, 35);
+//     console.log(`Reversed: ${reversed} and ${toAddFront} is added in the front and at the same time ${toAddEnd} is added at the end.`);
+//     console.log(`Final Array:`, arr);
+// }
+// temp(temperatures, 10, 35);
 
-// Exercise 9: Create an array called `books` with values `["Book A", "Book B", "Book C"]`.
-//    - Replace "Book B" with "Book D" and add "Book E" to the start of the array.
-//    - Remove the last book and check if "Book F" exists.
-const books = ["Book A", "Book B", "Book C"];
-const replace = (arr, replacer, replaced, toAddFront)=>{
-    arr[replaced] = replacer;
-    arr.unshift(toAddFront);
-    console.log(`${replaced} is replaced by ${replacer} and ${toAddFront} is added in the front of the array.`);
-    console.log(`Final Array:`,  arr);
-}
-replace(books, "Book D", "Book B", "Book E")
+// // Exercise 9: Create an array called `books` with values `["Book A", "Book B", "Book C"]`.
+// //    - Replace "Book B" with "Book D" and add "Book E" to the start of the array.
+// //    - Remove the last book and check if "Book F" exists.
+// const books = ["Book A", "Book B", "Book C"];
+// const replace = (arr, replacer, replaced, toAddFront)=>{
+//     arr[replaced] = replacer;
+//     arr.unshift(toAddFront);
+//     console.log(`${replaced} is replaced by ${replacer} and ${toAddFront} is added in the front of the array.`);
+//     console.log(`Final Array:`,  arr);
+// }
+// replace(books, "Book D", "Book B", "Book E")
 
 
-const functionArr = (arr, checkItem)=>{
-    const deleted = arr.pop();
-   const resultCheck = arr.some((item)=>{
-        return arr[item] === checkItem;
-    })
-    console.log(`${deleted} is deleted from the array.`);
-    console.log(`${checkItem} is ${resultCheck}`);   
-}
-functionArr(books, "Book F");
+// const functionArr = (arr, checkItem)=>{
+//     const deleted = arr.pop();
+//    const resultCheck = arr.some((item)=>{
+//         return arr[item] === checkItem;
+//     })
+//     console.log(`${deleted} is deleted from the array.`);
+//     console.log(`${checkItem} is ${resultCheck}`);   
+// }
+// functionArr(books, "Book F");
 
 // Exercise 10: Create an array called `numbers2` with values `[10, 20, 30, 40]`.
 //    - Insert `25` between `20` and `30`, then remove the first element. Sort in descending order.
-const numbers2 = [10, 20, 30, 40];
-const insertSort = (arr, toAdd)=>{
-    arr.splice(2, 0, toAdd);
-    arr.shift();
-    arr.sort((a, b) =>{ return b - a});
-    console.log(`First element is deleted.`);
-    console.log(`${toAdd} is added and the array is sorted in descending order.`);
-    console.log(`Final Array:`, arr);
-    
-}
-insertSort(numbers2, 25);
+// const numbers2 = [10, 20, 30, 40];
+// const insertSort = (arr, toAdd)=>{
+//     arr.splice(2, 0, toAdd);
+//     arr.shift();
+//     arr.sort((a, b) =>{ return b - a});
+//     console.log(`First element is deleted.`);
+//     console.log(`${toAdd} is added and the array is sorted in descending order.`);
+//     console.log(`Final Array:`, arr);
+
+// }
+// insertSort(numbers2, 25);
 
 
 // Exercise 11: Create an array called `movies` with values `["Inception", "Titanic", "Avatar"]`.
 //    - Add a new movie at the beginning, then check if "Titanic" is in the array and remove it.
-
+const movies = ["Inception", "Titanic", "Avatar"];
+const functionMovies = (arr, toAddFront, checkItem) => {
+    arr.unshift(toAddFront);
+    const check = arr.some((item) => { return item === checkItem })
+    if (check) {
+        arr = arr.filter((item) => {
+            return item !== checkItem
+        })
+    }
+    console.log(`${toAddFront} is added in the front of the array and ${checkItem} is ${check}`);
+    console.log(`Final Array:`, arr);
+}
+functionMovies(movies, "Hero", "Titanic");
 // Exercise 12: Create an array called `months` with values `["January", "February", "March"]`.
 //    - Add "December" at the end, then sort the array in alphabetical order.
 
