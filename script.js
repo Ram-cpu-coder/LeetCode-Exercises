@@ -343,17 +343,34 @@ console.log(turtle(pets, "turtle"));
 //    - Sort the scores in ascending order, then add 90 at the correct position to maintain the order.
 
 const scores = [95, 85, 75, 65];
-console.log("Scores",scores);
+console.log("Scores", scores);
 
 scores.sort();
 console.log("Sorted scores before adding element:", scores);
 
-scores.push(90);
-scores.sort();
-console.log("Added and sorted scores:", scores);
+const addAndSort = (arr, score) => {
+    arr.push(score);
+    arr.sort();
+    console.log("Added and Sorted scores:", arr);
+}
+addAndSort(scores, 90);
+
 
 // Exercise 6: Create an array called `hobbies` with values `["reading", "swimming", "coding"]`.
 //    - Remove the first hobby, add "traveling" at the end, and find the index of "coding".
+const hobbies = ["reading", "swimming", "coding"];
+console.log("Hobbies:", hobbies);
+
+const remove_add_find = (arr, str, findIndexOf)=>{
+    arr.shift();
+    arr.push(str);
+    const Index = arr.indexOf(findIndexOf);
+
+    console.log(`First item is removed and ${str} is added at the end.`);
+    console.log(arr);
+    console.log(`Index of ${findIndexOf} is ${Index}`); 
+}
+remove_add_find(hobbies, "travelling", "coding");
 
 // Exercise 7: Create an array called `days` with values `["Monday", "Tuesday", "Wednesday"]`.
 //    - Add "Thursday" at the end, "Sunday" at the beginning, then remove "Tuesday" from the array.
