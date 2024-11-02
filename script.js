@@ -375,6 +375,20 @@ remove_add_find(hobbies, "travelling", "coding");
 // Exercise 7: Create an array called `days` with values `["Monday", "Tuesday", "Wednesday"]`.
 //    - Add "Thursday" at the end, "Sunday" at the beginning, then remove "Tuesday" from the array.
 
+const days = ["Monday", "Tuesday", "Wednesday"];
+console.log("Days:", days);
+
+const add_remove = (toAddFront, toAddEnd, toRemove, arr)=>{
+    arr.unshift(toAddFront);
+    arr.push(toAddEnd);
+    delete arr[toRemove];
+
+    console.log(toAddFront, "is added in the front and", toAddEnd, "is added in the end and", toRemove, "is removed." );
+    
+}
+add_remove("Sunday", "Thursday", "Tuesday", days);
+console.log(days);
+
 // Exercise 8: Create an array called `temperatures` with values `[30, 25, 20, 15]`.
 //    - Reverse the array, then add 10 at the beginning and 35 at the end. Sort it in ascending order.
 
