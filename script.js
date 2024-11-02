@@ -126,31 +126,49 @@
 // substring
 //  without repeating characters.
 
-//  const s = "abcabcbb";
+//  const lengthOfLongestSubstring = (s)=>{
+//     let right = 0;
+//     let left = 0;
+//     let maxLength = 0;
+//     let possibleStr = [];
 
- const lengthOfLongestSubstring = (s)=>{
-    let right = 0;
-    let left = 0;
-    let maxLength = 0;
-    let possibleStr = [];
+//     for(right = 0; right < s.length-1; right++){
 
-    for(right = 0; right < s.length-1; right++){
-
-        while(possibleStr.includes(s[right])){
-            delete possibleStr[left];
-            left++;
-        }
-        possibleStr.push(s[right]);
-        maxLength = Math.max(maxLength, right - left + 1)
-    }
-    console.log(possibleStr);
+//         while(possibleStr.includes(s[right])){
+//             delete possibleStr[left];
+//             left++;
+//         }
+//         possibleStr.push(s[right]);
+//         maxLength = Math.max(maxLength, right - left + 1)
+//     }
+//     console.log(possibleStr);
     
-    return maxLength;
- }
+//     return maxLength;
+//  }
 
- console.log(lengthOfLongestSubstring("abcabcbb"));
+//  console.log(lengthOfLongestSubstring("abcabcbb"));
 
  
  
+
+// =====================================================================================================
+
+// Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
+
+// Note: You must not use any built-in BigInteger library or convert the inputs to integer directly.
+
+
+// const multiplyStr = (num1, num2)=>{
+//     let number1 = parseFloat(num1);
+//     let number2 = parseFloat(num2);
+    
+//     let result = number1 * number2;
+//     return result.toString();
+// }
+// console.log(multiplyStr("23", "34"));
+
+
+//calculation in leetcode is wrong for 123456789 * 987654321
+// =====================================================================================================
 
 // =====================================================================================================
