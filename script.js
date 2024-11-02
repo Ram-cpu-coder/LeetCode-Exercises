@@ -232,9 +232,26 @@ console.log(arr);
 console.log("11) ", sum);
 
 // Check if there is any number greater than 5 using some().
+const gT5 = arr.some((item)=>{
+    return item > 5;
+})
+console.log("12) ",gT5);
+
 // Check if all numbers are less than 10 using every().
+const lT10 = arr.every((item)=>{
+    return item < 10;
+})
+console.log(arr);
+console.log("13) ",lT10);
+
 // Find the first number that is greater than 4 using find().
+const firstGt4 = arr.find((item)=>{
+    return item > 4;
+})
+console.log("14) " , firstGt4);
+
 // Create another array called moreNumbers with values [2, 4, 6] and combine it with numbers using concat().
+
 // Sort the numbers array in ascending order using sort().
 // Reverse the numbers array using reverse().
 // Create a new array called firstTwoNumbers that contains the first two elements using slice().
